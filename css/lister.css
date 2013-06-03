@@ -1,0 +1,102 @@
+.setwidth{
+    width:1000px;
+    /*margin-left:auto;*/
+    /*margin-right:auto;*/
+}
+
+h2{
+    font:  bold 2.7em titling-caps;
+    font-family:'Yesteryear',cursive;
+    color: #1F1F10;
+}
+
+#slogan{
+    font:  bold 1.5em titling-caps;
+    font-family: 'Shadows Into Light Two', cursive;
+    color: #474731;
+
+}
+
+#logo{
+    width: 40px;
+    height: 40px;
+    padding:0 10px 0 10px;
+
+}
+
+#topline{
+    color:#000000;
+    font:  bold 2.7em titling-caps;
+    font-family:'Yesteryear',cursive;
+    color: #1F1F10;
+}
+
+#title{
+    margin-left: 30px;
+    display:block;
+    text-align: left;
+
+
+}
+
+input[type="text"] {
+    height: 30px;
+    width: 350px;
+    padding: 10px;
+    margin-right: 20px;
+    font-size: 24px;
+    float: inherit;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font:  bold 1.2em titling-caps;
+    font-family: 'Shadows Into Light Two', cursive;
+}
+button {
+    height: 56px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #ccc;
+    cursor: pointer;
+    outline: none;
+    font:  bold 1.2em titling-caps;
+    font-family: 'Shadows Into Light Two', cursive;
+    color: #474731;
+    border-radius: 20px;
+}
+
+button:hover{
+    background-color: #608CFF;
+    cursor: pointer;
+}
+
+form{
+    width: 800px;
+    text-align: center;
+    margin: 20px auto;
+
+}
+
+#fullBody{
+    text-align: center;
+}
+
+#show-items li { list-style-type: none; padding: 5px; background-color: #EFEFEF; padding: 10px;
+    font:  bold 1.2em titling-caps;
+    font-family: 'Shadows Into Light Two', cursive;text-align: left;
+    margin-bottom: 5px;
+
+}
+#show-items li:hover { background-color: #A9BCF5; }
+#show-items li a { color: red; display: block; float: right; text-decoration: none;cursor:pointer; }
+
+
+#listy,#elements{
+    width: 50% ;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-bottom: 20px;
+
+}
+
+
+

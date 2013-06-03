@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="images/forgetmenot.ico" type="image/x-icon">
+    <link rel="icon" href="images/forgetmenot.ico" type="image/x-icon">
+    <link href='http://fonts.googleapis.com/css?family=Yesteryear' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='css/lister.css'>
+    <script type="text/javascript" src="js/lister.js">
+    </script>
+    <title>Forget-Me-Not</title>
+</head>
+<body onload="l.loadItems()">
+<div id='fullBody'>
+    <div id="title">
+        <div id="topline">
+            <span>Forget-me-not
+            <img src='./images/forget_me_not.gif' id='logo'>
+             </span>
+        </div>
+        <div id='slogan'>Never forget a thing
+        </div>
+    </div>
+
+     <div id = "elements">
+        <input id="todo" type="text" value="" onKeydown="Javascript: if (event.keyCode==13) l.addToList();"/>
+        <button id="submit" onclick="l.addToList()">Add to List</button>
+     </div>
+    <div id = "listy">
+        <ul id="show-items"></ul>
+    </div>
+    <button id="clear" onclick="l.clearList()">Clear the List</button>
+
+</div>
+</body>
+</html>
