@@ -18,41 +18,42 @@ mylist.lister = function(){
  var item,list;
 
 //prototype
-mylist.lister.prototype.addToList = function(){
-
-        var li = document.createElement("li");
-        var cross = document.createElement("a");
-        cross.innerHTML = "x";
-        li.innerHTML = l.item.value;
-        localStorage.setItem("item-"+i, l.item.value);
-        //cross.addEventListener("click",removeSelected,false);
-        li.appendChild(cross);
-        l.list.appendChild(li);
-        l.item.value="";
+    mylist.lister.prototype.addToList = function(){
+            var li = document.createElement("li");
+            var cross = document.createElement("a");
+            cross.innerHTML = "x";
+            cross.className = cross.className + "remove";
+            li.innerHTML = l.item.value;
+            localStorage.setItem("item-"+i, l.item.value);
+            cross.addEventListener("click", l.removeSelected,false);
+            li.appendChild(cross);
+            l.list.appendChild(li);
+            l.item.value="";
     }
 
-mylist.lister.prototype.clearList = function(){
-        var li = document.getElementsByTagName("li");
-        len = li.length;
-        while(len--){
-            li[len].parentNode.removeChild(li[len]);
-        }
-        //li.parentNode.removeChild(li);
-        localStorage.clear();
-      },
-    /*
-    function getEventTarget(e) {
-        e = e || window.event;
-        return e.target || e.srcElement;
+    mylist.lister.prototype.clearList = function(){
+            var li = document.getElementsByTagName("li");
+            len = li.length;
+            while(len--){
+                li[len].parentNode.removeChild(li[len]);
+            }
+            //li.parentNode.removeChild(li);
+            localStorage.clear();
+    }
+
+    mylist.lister.prototype.getEventTarget=function(e) {
+            e = e || window.event;
+            return e.target || e.srcElement;
     }
 
 
-    function removeSelected(event) {
-            var target = getEventTarget(event);
-            target.parentNode.removeChild(target);
-    };
+    mylist.lister.prototype.removeSelected = function(event) {
+                var target = l.getEventTarget(event);
+                var currentItem = target.parentNode;
+                currentItem.parentNode.removeChild(currentItem);
+    }
 
-    */
+
     mylist.lister.prototype.loadItems = function(){
         this.item = document.getElementById("todo");
         this.list = document.getElementById("show-items");
